@@ -1,10 +1,9 @@
-package com.example.zookeeperconsumer.Controller;
+package com.example.consulconsumer.controller;
 
 
 import com.example.common.pojo.JsonResult;
 import com.example.common.pojo.Payment;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 

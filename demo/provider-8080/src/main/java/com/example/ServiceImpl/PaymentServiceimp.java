@@ -1,8 +1,8 @@
-package com.example.provider.ServiceImpl;
+package com.example.ServiceImpl;
 
-import com.example.provider.Service.PaymentService;
-import com.example.provider.dao.PaymentDao;
-import com.example.provider.common.pojo.Payment;
+import com.example.Service.PaymentService;
+import com.example.common.pojo.Payment;
+import com.example.dao.PaymentDao;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

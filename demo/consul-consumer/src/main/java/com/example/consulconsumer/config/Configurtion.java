@@ -1,4 +1,4 @@
-package com.example.cconsumer80.config;
+package com.example.consulconsumer.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

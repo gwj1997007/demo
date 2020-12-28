@@ -1,6 +1,6 @@
-package com.example.provider.Service;
+package com.example.Service;
 
-import com.example.provider.common.pojo.Payment;
+import com.example.common.pojo.Payment;
 
 public interface PaymentService {
     public int createPayment(Payment payment);

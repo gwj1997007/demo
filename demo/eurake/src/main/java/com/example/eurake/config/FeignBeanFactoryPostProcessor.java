@@ -1,4 +1,4 @@
-package com.example.provider.eurake.config;
+package com.example.eurake.config;
 
 import java.util.Arrays;
 

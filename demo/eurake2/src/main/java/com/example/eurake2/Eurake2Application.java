@@ -1,4 +1,4 @@
-package com.example.provider.eurake2;
+package com.example.eurake2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

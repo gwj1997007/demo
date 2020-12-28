@@ -1,6 +1,6 @@
-package com.example.provider.dao;
+package com.example.dao;
 
-import com.example.provider.common.pojo.Payment;
+import com.example.common.pojo.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

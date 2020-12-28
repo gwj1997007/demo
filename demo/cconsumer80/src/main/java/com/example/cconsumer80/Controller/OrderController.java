@@ -4,6 +4,7 @@ package com.example.cconsumer80.Controller;
 import com.example.common.pojo.JsonResult;
 import com.example.common.pojo.Payment;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -13,7 +14,7 @@ public class OrderController {
 
     @Autowired
     private RestTemplate restTemplate;
-    private static  final String host="http://localhost:8080/";
+    private static  final String host="http://provider-client/";
 
     @GetMapping("/get/{id}")
     public JsonResult<Payment> getPaymentById(@PathVariable Long id) {

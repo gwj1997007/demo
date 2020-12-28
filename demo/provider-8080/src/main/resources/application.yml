@@ -2,7 +2,7 @@ server:
   port: 8080
 
 servlet:
-  context-path: /Payment
+  context-path: /
   tomcat:
     max-threads: 1000
 
@@ -24,7 +24,7 @@ spring:
 
 mybatis:
   mapper-locations: classpath:/mapper/*.xml
-  type-aliases-package: com.example.providerpayment8001.pojo
+#  type-aliases-package: com.example.common.pojo
   configuration:
     default-statement-timeout: 30
     map-underscore-to-camel-case: false
@@ -36,7 +36,7 @@ eureka:
       register-with-eureka: true
       #表示不向注册中心注册自己
       fetch-registry: true
-      defaultZone: http://localhost:2001/eureka
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
 #lOG
 logging:
   level:

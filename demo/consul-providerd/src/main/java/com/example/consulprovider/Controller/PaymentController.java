@@ -1,8 +1,8 @@
-package com.example.Controller;
+package com.example.consulprovider.Controller;
 
-import com.example.Service.PaymentService;
 import com.example.common.pojo.JsonResult;
 import com.example.common.pojo.Payment;
+import com.example.consulprovider.Service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;

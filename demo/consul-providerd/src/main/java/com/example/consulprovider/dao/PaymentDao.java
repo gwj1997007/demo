@@ -1,4 +1,4 @@
-package com.example.dao;
+package com.example.consulprovider.dao;
 
 import com.example.common.pojo.Payment;
 import org.apache.ibatis.annotations.Mapper;

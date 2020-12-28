@@ -1,0 +1,19 @@
+server:
+  port: 8087
+
+servlet:
+  context-path: /
+  tomcat:
+    max-threads: 1000
+
+#spring
+spring:
+  devtools:
+    restart:
+      enabled: true
+  application:
+    name: provider-consumer
+  cloud:
+    consul:
+      port: 8500
+      host: localhost
