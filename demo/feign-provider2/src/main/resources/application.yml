@@ -1,0 +1,46 @@
+server:
+  port: 8092
+
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+  application:
+    name: feign-provider
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: 123
+    driver-class-name: org.mariadb.jdbc.Driver
+    #\u6CE8\u518C\u7684\u5BA2\u6237\u7AEF\u540D\u5B57
+
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  #    type-aliases-package: com.example.providerpayment8001.pojo
+  configuration:
+    default-statement-timeout: 30
+    map-underscore-to-camel-case: false
+#lOG
+logging:
+  level:
+    com.example: DEBUG
+eureka:
+  client:
+    service-url:
+      register-with-eureka: true
+      #\u8868\u793A\u4E0D\u5411\u6CE8\u518C\u4E2D\u5FC3\u6CE8\u518C\u81EA\u5DF1
+      fetch-registry: true
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+
+
+feign:
+  hystrix:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

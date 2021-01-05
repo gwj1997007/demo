@@ -1,0 +1,47 @@
+server:
+  port: 8090
+
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+  application:
+    name: feign-consumer
+eureka:
+  client:
+    service-url:
+      register-with-eureka: true
+      #\u8868\u793A\u4E0D\u5411\u6CE8\u518C\u4E2D\u5FC3\u6CE8\u518C\u81EA\u5DF1
+      fetch-registry: true
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: consumer
+
+
+    #\u91CD\u8BD5
+ribbon:
+  MaxAutoRetriesNextServer: 2
+  MaxAutoRetries: 1
+  OkToRetryOnAllOperations: true
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: localhost
+feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+#\u6CE8\u89E3\u65B9\u5F0F
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 500

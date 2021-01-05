@@ -11,7 +11,7 @@ eureka:
   instance:
     hostname: eureka2
   client:
-    register-with-eureka: false  #profile\u7684\u914D\u7F6E\u4F1A\u8986\u76D6\u516C\u7528\u914D\u7F6E
+    register-with-eureka: true  #profile\u7684\u914D\u7F6E\u4F1A\u8986\u76D6\u516C\u7528\u914D\u7F6E
     fetch-registry: true        #profile\u7684\u914D\u7F6E\u4F1A\u8986\u76D6\u516C\u7528\u914D\u7F6E
     service-url:
       defaultZone: http://eureka1:2001/eureka
